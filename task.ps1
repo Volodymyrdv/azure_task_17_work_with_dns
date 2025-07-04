@@ -97,7 +97,7 @@ $privateDnsZoneLink = New-AzPrivateDnsVirtualNetworkLink `
 
 Write-Host "Creating private DNS zone Cname record for web server"
 $Records = @()
-$Records += New-AzPrivateDnsRecordConfig -Cname "$webVmName.$privateDnsZoneName"
+$Records += New-AzPrivateDnsRecordConfig -Cname "webserver.$privateDnsZoneName"
 New-AzPrivateDnsRecordSet `
 -Name "todo" `
 -RecordType Cname `
